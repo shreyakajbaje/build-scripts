@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi8/ubi:latest
+FROM registry.access.redhat.com/ubi8:8.7
 
 # Required Labels
 LABEL name="redis" \
@@ -22,7 +22,7 @@ RUN sudo yum update -y -q \
   pushd redis && \
   git checkout 6.2.4 && \
   make distclean && \
-  make V=1 && \
+  make V=1 MALLOC=libc && \
   sudo make install && \
   popd && \
   rm -fr redis && \

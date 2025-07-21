@@ -1,0 +1,15 @@
+{
+  "maintainer": "Amitkumar282",
+  "package_name": "jackson-core",
+  "github_url": "https://github.com/FasterXML/jackson-core",
+  "version": "jackson-core-2.17.2",
+  "package_dir": "j/jackson-core",
+  "default_branch": "master",
+  "build_script": "jackson-core_v2.17.2_ubi_9.3.sh", 
+  "docker_build": false,
+  "use_non_root_user": false,
+  "validate_build_script": true,
+  "*": {
+    "build_script": "jackson-core_v2.17.2_ubi_9.3.sh"
+  }
+}
